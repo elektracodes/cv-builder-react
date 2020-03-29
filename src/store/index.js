@@ -2,8 +2,8 @@ import React, { createContext, useReducer } from "react";
 
 const initialState = {
   cv: {
-    data: {
-      title: "Personal Data",
+    personal: {
+      title: "Personal Personal",
       firstName: "Elektra",
       lastName: "Bilali Simou",
       jobTitle: "Front End Developer",

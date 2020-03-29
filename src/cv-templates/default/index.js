@@ -6,12 +6,14 @@ import AppContext from "../../store";
 
 const Default = () => {
   const context = useContext(AppContext);
-  const { cv } = context;
+  const {
+    state: { cv },
+  } = context;
 
   return (
     <div>
       <div className="grid grid-cols-4 items-center">
-        <div className="col-span-3 flex items-center">{cv.data.title}</div>
+        <div className="col-span-3 flex items-center">{cv.personal.title}</div>
       </div>
     </div>
   );

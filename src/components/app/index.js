@@ -6,8 +6,9 @@ import Default from "../../cv-templates/default/index";
 
 const App = () => {
   const context = useContext(AppContext);
-
-  const { template } = context;
+  const {
+    state: { template, sidebarOptions },
+  } = context;
 
   const renderTemplate = () => {
     switch (template.name) {
@@ -19,9 +20,9 @@ const App = () => {
   };
 
   return (
-    <div>
+    <div className="h-screen grid grid-cols-4 overflow-hidden">
       <Sidebar />
-      <div>
+      <div className="h-screen col-span-3 flex justify-center items-center overflow-scroll">
         <div>{renderTemplate()}</div>
       </div>
     </div>
